@@ -7,6 +7,7 @@ let point = document.getElementById("point")
 let x = 0;
 let y = 0;
 let btn;
+let result;
 
 numbers.forEach(number =>{
     number.addEventListener("click",()=>{
@@ -16,25 +17,18 @@ numbers.forEach(number =>{
 uses.forEach(use =>{
     use.addEventListener("click",()=>{
         if (use.textContent === "=") {
-          y = +screen.value;
+          y = parseFloat(screen.value);
+          result = x + y;
           calculateResult();
         }else{
             btn = use.textContent;
-            x = +screen.value;
+            x = parseFloat(screen.value);
             screen.value = '';
         }
         if(use.textContent === "%"){
             screen.value = x / 100;
         }
     })
-})
-
-
-hakadarc.addEventListener("click", ()=>{
-    screen.value = -1 * x;
-})
-point.addEventListener("click", ()=>{
-    screen.value = x + '.';
 })
 
 function calculateResult() {
@@ -61,4 +55,9 @@ function calculateResult() {
 del.addEventListener("click",()=>{
     screen.value = null;
 })
-
+hakadarc.addEventListener("click", ()=>{
+    screen.value = -1 * x;
+})
+point.addEventListener("click", ()=>{
+    screen.value += ".";    
+})

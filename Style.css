@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    background-color: gray;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+    width: 250px;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border-radius: 50px;
+    background-color: white;
+    width: 50px;
+}
+.p{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#b{
+    width: 85%;
+}
+.knopkeq{
+    display: flex;
+    gap: 4px;
+}
+#o0{
+    width: 49%;
+}
